@@ -1,0 +1,10 @@
+web:
+  build: .
+  ports:
+    - "5000:5000"
+  links:
+    - redis
+  environment:
+    GREETING: Hello World!
+redis:
+  image: redis
